@@ -1,0 +1,70 @@
+"""端口层（M3：记忆只读面；M5：出站传输与投递账本；M5.3：聊天记录只读面）。"""
+
+from .history import (
+    HistoryBudget,
+    HistoryLine,
+    HistoryPort,
+    HistorySlice,
+    ROLE_ASSISTANT,
+    ROLE_OTHER,
+    ROLE_OWNER,
+    SOURCE_CONVERSATION,
+    SOURCE_HYBRID,
+    SOURCE_MODES,
+    SOURCE_PLATFORM,
+)
+from .memory import (
+    ChangeEvent,
+    MemoryPort,
+    PortNotWired,
+    RecallHit,
+    RecallQuery,
+    RecallResult,
+    SourceCheck,
+)
+from .bili_share_outbox import (
+    RelayReport,
+    ShareAck,
+    ShareBridge,
+    ShareBridgeUnavailable,
+    ShareTicket,
+    ShareTicketError,
+    normalize_ticket,
+)
+from .store import DeliveryStore, MemoryDeliveryStore
+from .transport import DisabledTransport, FakeTransport, Receipt, Transport, TransportError
+
+__all__ = [
+    "ChangeEvent",
+    "DeliveryStore",
+    "DisabledTransport",
+    "FakeTransport",
+    "HistoryBudget",
+    "HistoryLine",
+    "HistoryPort",
+    "HistorySlice",
+    "MemoryDeliveryStore",
+    "MemoryPort",
+    "PortNotWired",
+    "ROLE_ASSISTANT",
+    "ROLE_OTHER",
+    "ROLE_OWNER",
+    "Receipt",
+    "RecallHit",
+    "RecallQuery",
+    "RecallResult",
+    "SOURCE_CONVERSATION",
+    "SOURCE_HYBRID",
+    "SOURCE_MODES",
+    "SOURCE_PLATFORM",
+    "RelayReport",
+    "ShareAck",
+    "ShareBridge",
+    "ShareBridgeUnavailable",
+    "ShareTicket",
+    "ShareTicketError",
+    "SourceCheck",
+    "normalize_ticket",
+    "Transport",
+    "TransportError",
+]

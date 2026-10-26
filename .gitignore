@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.db
+*.db-wal
+*.db-shm
+*.log
+data/
+tests/_tmp/
+state/
+snapshots/
+deliveries.json
+config_revision.jsonl
